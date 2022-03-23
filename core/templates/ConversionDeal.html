@@ -1,0 +1,30 @@
+{% extends "admin/base_site.html" %}
+
+
+{% block content %}
+
+<table>
+    <tr>
+        <td>Сотрудник</td>
+        <td>Количество сделок</td>
+        <td>Количество продаж</td>
+        <td>Конверсия сделок к продажам</td>
+    </tr>
+
+{% for i in deal%}
+    <tr>
+        <td>{{i.Name}}</td>
+        <td>{{i.Manager__count}}</td>
+        <td>{{i.Sell}}</td>
+        <td>{{i.Conv }}%</td>
+    </tr>
+{% endfor%}
+</table>
+<style>
+    table, td{
+        font-size: 1.5em !important;
+         border: 2px solid black
+    }
+</style>
+{% endblock %}
+

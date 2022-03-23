@@ -1,0 +1,28 @@
+{% extends "admin/base_site.html" %}
+
+
+{% block content %}
+
+<table>
+    <tr>
+        <td>Статус</td>
+
+{% for i in res%}
+    <td> {{i.Name}}</td>
+{% endfor%}
+    </tr>
+    <tr>
+        <td>Количество</td>
+{% for i in res%}
+    <td> {{i.Sum__count}}</td>
+{% endfor%}
+    </tr>
+</table>
+<style>
+    table, td{
+        font-size: 1.5em !important;
+         border: 2px solid black
+    }
+</style>
+{% endblock %}
+
